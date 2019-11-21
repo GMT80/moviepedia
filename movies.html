@@ -30,7 +30,10 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <nav class="navbar navbar-light justify-content-between">
-                    <a class="navbar-logo">Moviepedia</a>
+                    <a href="index.html" class="navbar-logo">Moviepedia
+                        <span>Movies</span>
+                    </a>
+                    <button id="new_research" type="button" class="btn btn-outline-danger hidden">New Research</button>
                 </nav>
             </div>
         </div>
@@ -39,20 +42,18 @@
     <section class="main">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-                <div id="wrapper">
-                    <h1>Film e serie TV.<br>Cerca e trova tutto quello che vuoi.</h1>
-
-                    <button type="button" class="btn btn-outline-danger btn-lg"
-                        onclick="window.location.href='movies.html'">
-                        Film
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-
-
-                    <button type=" button" class="btn btn-outline-danger btn-lg"
-                        onclick="window.location.href='series.html'">Serie
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                <div id="card-wrapper">
+                    <input id="search" type="text" placeholder="Search">
+                    <!-- GenerateHTML -->
+                    <script id="template" type="text/x-handlebars-template">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ poster }}" alt="{{ title }}">
+                             <div class="card-body">
+                               <h5 class="card-title">{{ title }}</h5>
+                               <p class=" card-text">{{ overview }}</p>
+                             </div>
+                        </div>                      
+                    </script>
                 </div>
             </div>
         </div>
