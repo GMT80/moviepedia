@@ -34,44 +34,44 @@
                         <span>Series</span>
                     </a>
                     <button id="new_research" type="button" class="btn btn-outline-danger hidden">New Research</button>
-                    <i class="fas fa-home" onclick="window.location.href='index.html'""></i>
+
                 </nav>
             </div>
         </div>
     </header>
     <!-- Main  -->
-    <section class=" main">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-                                <div id="card-wrapper">
-                                    <input id="search_series" type="text" placeholder="Search">
-                                    <!-- GenerateHTML -->
-                                    <script id="template" type="text/x-handlebars-template">
-                                        <div class="card">
-                 <img class="card-img-top" src="{{ poster }}" alt="{{ title }}">
-                  <div class="card-body">
-                   <h5 class="card-title">{{ title }}</h5>
-                   <p class=" card-text">{{ overview }}</p>
-                  </div>
-                </div>                      
-            </script>
-                                </div>
-                            </div>
-                        </div>
-                        </section>
-                        <!-- Footer -->
-                        <footer class="footer">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <span>Moviepedia - &copy; 2019 Gian Maria Tarsi</span>
-                                </div>
-                            </div>
-                        </footer>
-                        <!-- Handlebars -->
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js">
-                        </script>
-                        <!-- JS -->
-                        <script src="scripts.js"></script>
+    <section class="main">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+                <div id="card-wrapper">
+                    <input id="search_series" type="text" placeholder="Search">
+
+                    <!-- GenerateHTML -->
+                    <script id="template" type="text/x-handlebars-template">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ poster }}" alt="{{ title }}">
+                             <div class="card-body">
+                               <h5 class="card-title">{{ title }}</h5>
+                               <p class=" card-text">{{ overview }}</p>
+                             </div>
+                        </div>                      
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <span>Moviepedia - &copy; 2019 Gian Maria Tarsi</span>
+            </div>
+        </div>
+    </footer>
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+    <!-- JS -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>

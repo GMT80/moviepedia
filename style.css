@@ -7,7 +7,8 @@
 html,
 body {
     font-family: 'Lato', sans-serif;
-    max-width: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -49,28 +50,17 @@ body {
 }
 
 #card-wrapper {
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    overflow: scroll;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 71%);
-    /* ff3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(71%, rgba(0, 0, 0, 1)));
-    /* safari4+,chrome */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 71%);
-    /* safari5.1+,chrome10+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 71%);
-    /* opera 11.10+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 71%);
-    /* ie10+ */
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 71%);
-    /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=1);
-    /* ie6-9 */
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: url('asset/library-488672_1920.jpg') black;
 }
+
 
 #card-wrapper input {
     width: 80%;
@@ -86,13 +76,15 @@ body {
 }
 
 #wrapper {
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
+    overflow: hidden;
+
     background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 71%);
     /* ff3.6+ */
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(71%, rgba(0, 0, 0, 1)));
@@ -112,7 +104,7 @@ body {
 #wrapper h1 {
     display: inline-block;
     color: white;
-    font-size: 45px;
+    font-size: 70px;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -171,23 +163,40 @@ body {
     display: none;
 }
 
-.fa-home {
-    cursor: pointer;
-    visibility: hidden;
-}
-
-
 /* 
 MEDIA QUERIES 
 */
 
 @media screen and (max-width: 441px) {
 
-    .fa-home {}
+    .navbar {
+        height: auto;
+        padding-bottom: 3vh;
+    }
 
-    #search,
-    #search_series {
+    .navbar-brand {
+        display: none;
+    }
+
+    #wrapper h1 {
+        font-size: 45px;
+    }
+
+    #search {
         width: 90vw;
         height: 5vh;
     }
+}
+
+@media screen and (max-width: 320px) {
+
+    .navbar-logo span {
+        font-size: 14px;
+    }
+
+    .card {
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
 }
