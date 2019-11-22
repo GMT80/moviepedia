@@ -171,6 +171,11 @@ body {
     display: none;
 }
 
+.fa-home {
+    cursor: pointer;
+    visibility: hidden;
+}
+
 
 /* 
 MEDIA QUERIES 
@@ -178,11 +183,10 @@ MEDIA QUERIES
 
 @media screen and (max-width: 441px) {
 
-    .navbar-brand {
-        display: none;
-    }
+    .fa-home {}
 
-    #search {
+    #search,
+    #search_series {
         width: 90vw;
         height: 5vh;
     }
